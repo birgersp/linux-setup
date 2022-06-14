@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Syncing branch (and master)"
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+git pull
+git push
+if [ "$BRANCH" != "master" ]; then
+	echo "Syncing with master"
+	git pull origin master
+	git push origin "$BRANCH":master
+	git push
+fi
+echo "Done"

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PID=$(pgrep -x gnome-terminal-)
+if [[ $PID -ne "" ]]
+then
+    xdotool windowactivate `xdotool search --pid $PID | tail -1`
+else
+	gnome-terminal
+fi

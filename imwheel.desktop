@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=imwheel --kill --buttons "4 5"
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_US]=imwheel
+Comment[en_US]=No description
+X-GNOME-Autostart-Delay=0
